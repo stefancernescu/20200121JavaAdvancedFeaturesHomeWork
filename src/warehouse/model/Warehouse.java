@@ -21,5 +21,4 @@ public interface Warehouse {
     Warehouse getTotalValue();
 
     public void printTotalNumberOfItems();
-    //Warehouse updateNumberOfPieces(String itemName, Integer numberOfPiece);
 }

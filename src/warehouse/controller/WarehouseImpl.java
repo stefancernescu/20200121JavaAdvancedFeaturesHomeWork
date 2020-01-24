@@ -121,9 +121,11 @@ public class WarehouseImpl implements Warehouse {
     public void printTotalNumberOfItems() {
         Map<ItemEnum, Integer> enumIntegerMap = getTotalNumberOFItems();
         Iterator<Map.Entry<ItemEnum, Integer>> iterator = enumIntegerMap.entrySet().iterator();
+        System.out.println("Number of items from warehouse: ");
+        System.out.println("Type\t\tValue");
         while (iterator.hasNext()) {
             Map.Entry<ItemEnum, Integer> pair = iterator.next();
-            System.out.println(pair.getKey() + " " + pair.getValue());
+            System.out.println(pair.getKey() + "\t\t" + pair.getValue());
         }
     }
 
