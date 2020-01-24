@@ -1,18 +1,25 @@
-package warehouse;
+package warehouse.model;
 
 public class Item {
     private String name;
     private Double price;
+    //numarul de bucati pentru fiecare item
     private Integer piece;
 
+    public Item(){
+        super();
+    }
+
     public Item(String name, Double price, Integer piece) {
+        super();
         this.name = name;
         this.price = price;
         this.piece = piece;
     }
 
-    //Daca se introduce doar numele, obiectul va primi niste valori default
+    //Daca se introduce doar numele, obiectul va primi niste valori default pentru celelalte 2 variabile
     public Item(String name) {
+        super();//apelarea constructorului din clasa parinte Object
         this.name = name;
         this.price = 300.0;
         this.piece = 1;
