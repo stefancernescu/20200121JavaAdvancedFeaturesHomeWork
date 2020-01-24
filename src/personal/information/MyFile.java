@@ -13,6 +13,7 @@ public class MyFile {
     private List<Person> people;
     private Map<String, String> peopleMapping;
     private String filePath;
+    String[] splitted;
 
     //Lazy initialization
     public MyFile(String filePath) {
