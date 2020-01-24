@@ -16,7 +16,7 @@ public interface Warehouse {
     //Increase number of pieces/item
     void addMorePieces(String itemName, Integer newPieceNumber);
 
-    Map<ItemEnum, Integer> getTotalNumberOFItems();
+    Map<String, Integer> getTotalNumberOFItems();
 
     Warehouse getTotalValue();
 

@@ -91,43 +91,29 @@ public class WarehouseImpl implements Warehouse {
     }
 
     @Override
-    public Map<ItemEnum, Integer> getTotalNumberOFItems() {
+    public Map<String, Integer> getTotalNumberOFItems() {
         Integer numberTotalOfItems = 0;
-        Map<ItemEnum, Integer> numberOfItems = new TreeMap<>();
+        Map<String, Integer> numberOfItems = new TreeMap<>();
         for (Item each : items) {
-            if (each.getName().equalsIgnoreCase("Bicicleta") || each.getName().equalsIgnoreCase("Biciclete")) {
-                numberOfItems.put(ItemEnum.BICYCLE, each.getPiece());
-            }
-            if (each.getName().equalsIgnoreCase("Placa de snowboard") || each.getName().equalsIgnoreCase("Placi de snowboard")) {
-                numberOfItems.put(ItemEnum.SNOWBOARD, each.getPiece());
-            }
-            if (each.getName().equalsIgnoreCase("Cauciuc") || each.getName().equalsIgnoreCase("Cauciucuri")) {
-                numberOfItems.put(ItemEnum.TYRES, each.getPiece());
-            }
-            if (each.getName().equalsIgnoreCase("Skiuri") || each.getName().equalsIgnoreCase("Ski")) {
-                numberOfItems.put(ItemEnum.SKIS, each.getPiece());
-            }
-            if (each.getName().equalsIgnoreCase("Cutie goala") || each.getName().equalsIgnoreCase("Cutii goale")) {
-                numberOfItems.put(ItemEnum.EMPTYBOXES, each.getPiece());
-            }
-            //numberTotalOfItems=numberTotalOfItems+each.getPrice()
+            numberOfItems.put(each.getName(), each.getPiece());
             numberTotalOfItems += each.getPiece();
-            numberOfItems.put(ItemEnum.TOTALNUMBER, numberTotalOfItems);
         }
+        numberOfItems.put("Number of total Items", numberTotalOfItems);
         return numberOfItems;
     }
 
     @Override
     public void printTotalNumberOfItems() {
-        Map<ItemEnum, Integer> enumIntegerMap = getTotalNumberOFItems();
-        Iterator<Map.Entry<ItemEnum, Integer>> iterator = enumIntegerMap.entrySet().iterator();
+        Map<String, Integer> enumIntegerMap = getTotalNumberOFItems();
+        Iterator<Map.Entry<String, Integer>> iterator = enumIntegerMap.entrySet().iterator();
         System.out.println("Number of items from warehouse: ");
-        System.out.println("Type\t\tValue");
+        System.out.println("Type\t\tNumber of item(s)");
         while (iterator.hasNext()) {
-            Map.Entry<ItemEnum, Integer> pair = iterator.next();
+            Map.Entry<String, Integer> pair = iterator.next();
             System.out.println(pair.getKey() + "\t\t" + pair.getValue());
         }
     }
+
 
     @Override
     public Warehouse getTotalValue() {

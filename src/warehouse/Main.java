@@ -41,24 +41,37 @@ public class Main {
         //warehouse.printTotalNumberOfItems();
         //warehouse.displayAllItems();
 
-        try {
-            WarehouseFactory newFactory = new WarehouseFactory();
-            Warehouse pentry = newFactory.getWarehouse("pentry");
-            pentry.add(new Item("Borcan1",10.0,1));
-            pentry.add(new Item("Borcan2",12.0,2));
-            pentry.add(new Item("Borcan3",9.0,4));
-            pentry.add(new Item("Borcan4",4.0,1));
-            pentry.displayAllItems();
+//        try {
+//            WarehouseFactory newFactory = new WarehouseFactory();
+//            Warehouse pentry = newFactory.getWarehouse("pentry");
+//            pentry.add(new Item("Borcan1",10.0,1));
+//            pentry.add(new Item("Borcan2",12.0,2));
+//            pentry.add(new Item("Borcan3",9.0,4));
+//            pentry.add(new Item("Borcan4",4.0,1));
+//            pentry.displayAllItems();
+//
+//            Warehouse garage = newFactory.getWarehouse("garage");
+//            garage.add(new Item("Honda", 23500.0, 1));
+//            garage.add(new Item("Maserati", 50000.0, 1));
+//            garage.displayAllItems();
+//        } catch (Exception ex) {
+//            System.out.println("Exception main");
+//            ex.printStackTrace();
+//        }
 
-            Warehouse garage = newFactory.getWarehouse("garage");
+        try {
+            Warehouse garage = new WarehouseFactory().getWarehouse("Garage");
             garage.add(new Item("Honda", 23500.0, 1));
             garage.add(new Item("Maserati", 50000.0, 1));
+            garage.add(new Item("Mercedes", 50000.0, 5));
+            garage.add(new Item("Porche", 50000.0, 2));
+            garage.add(new Item("BMW", 50000.0, 2));
             garage.displayAllItems();
-        } catch (Exception ex) {
-            System.out.println("Exception main");
+            garage.printTotalNumberOfItems();
+        }catch (Exception ex){
+            System.err.println("Exception from main");
             ex.printStackTrace();
         }
-
 
     }
 }

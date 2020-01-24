@@ -1,5 +1,9 @@
 package personal.information;
 
-public class File {
+public class MyFile {
 
 }
+
+
+
+
