@@ -1,4 +1,4 @@
-package ex1;
+package inheritance.exercise;
 
 public abstract class Person{
     private String name;

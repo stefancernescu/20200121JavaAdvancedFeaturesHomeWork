@@ -29,9 +29,9 @@ public class Main1 {
         System.out.println(map.get(41).hashCode());
         System.out.println(map.get(1).hashCode());
 
-        Person person = new Person("Madalin");
+        Person person = new Person("test");
         System.out.println("hash code for object person " + person.hashCode());
-        Person person1 = new Person("Alexandru");
+        Person person1 = new Person("test11");
         System.out.println(person.equals(person1));
 
         System.out.println(person);

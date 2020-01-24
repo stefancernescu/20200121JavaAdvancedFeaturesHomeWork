@@ -1,4 +1,4 @@
-package ex1;
+package inheritance.exercise;
 
 public class Main {
     public static void main(String[] args) {

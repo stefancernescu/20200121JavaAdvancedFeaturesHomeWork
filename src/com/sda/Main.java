@@ -10,13 +10,13 @@ public class Main {
     public static void main(String[] args) {
         Map<Integer, List<Person>> map = new HashMap<>();
         List<Person> personList = new ArrayList<>();
-        personList.add(new Person("Alex"));
-        personList.add(new Person("Ovidiu"));
-        personList.add(new Person("Vic"));
+        personList.add(new Person("test"));
+        personList.add(new Person("test"));
+        personList.add(new Person("test"));
 
         List<Person> personList1 = new ArrayList<>();
-        personList.add(new Person("Razvan"));
-        personList.add(new Person("Liviu"));
+        personList.add(new Person("sssss"));
+        personList.add(new Person("cccc"));
         personList.add(new Person("Mihaela"));
 
         map.put(1, personList);

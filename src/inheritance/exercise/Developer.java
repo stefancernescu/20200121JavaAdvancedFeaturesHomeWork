@@ -1,4 +1,4 @@
-package ex1;
+package inheritance.exercise;
 
 public class Developer extends Person /*implements IDeveloper*/ {
     private String type;

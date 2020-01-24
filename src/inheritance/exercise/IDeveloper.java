@@ -1,4 +1,4 @@
-package ex1;
+package inheritance.exercise;
 
 public interface IDeveloper {
     IDeveloper write();
