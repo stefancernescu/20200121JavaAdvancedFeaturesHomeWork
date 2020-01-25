@@ -24,11 +24,12 @@ public class MyFile {
         person = new Person();
     }
 
+    //TODO: Cum pot separa metoda process() in mai multe metode ???
     public List<Person> process() {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(this.filePath))) {
             String fileLine;
             while ((fileLine = bufferedReader.readLine()) != null) {
-                String[] splitted = fileLine.split(" ");
+                String[] splitted = fileLine.split("\\s");//\\s whitespace characters
                 this.people.add(new Person(splitted[0], splitted[1], splitted[2]));
             }
         } catch (IOException ex) {
@@ -37,6 +38,37 @@ public class MyFile {
         }
         return people;
     }
+
+    /**Test
+     * Citeste din fisier
+     *
+     * @return o lista de array-uri
+     */
+    public List<String[]> readFile() {
+        List<String[]> test = new ArrayList<>();
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(this.filePath))) {
+            String fileLine;
+            while ((fileLine = bufferedReader.readLine()) != null) {
+                splitted = fileLine.split(" ");
+                test.add(splitted);
+            }
+        } catch (IOException ex) {
+            System.err.println("Exception has occured from read file method.");
+            ex.printStackTrace();
+        }
+        return test;
+    }
+
+    //Test
+    public void display(List<String[]> list) {
+        for (String[] each : list) {
+            for (int i = 0; i < each.length; i++) {
+                person.setName(each[i]);
+                System.out.print(person.getName()+" ");
+            }
+        }
+    }
+
 
     public Map<String, String> mappingProcess() {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(this.filePath))) {
