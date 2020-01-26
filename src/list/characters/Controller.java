@@ -6,10 +6,15 @@ import list.characters.shapes.Shape;
 import list.characters.shapes.VerticalLineImpl;
 
 public class Controller {
-    IOService ioService = new IOService();
-    //Loosly coupling
-    Shape horizontalLine = new HorizontalLineImpl();
-    Shape verticalLine = new VerticalLineImpl();
+    private IOService ioService;
+    private Shape horizontalLine;
+    private Shape verticalLine;
+
+    public Controller() {
+        ioService = new IOService();
+        horizontalLine = new HorizontalLineImpl();
+        verticalLine = new VerticalLineImpl();
+    }
 
     public void process() {
         //Try catch ???

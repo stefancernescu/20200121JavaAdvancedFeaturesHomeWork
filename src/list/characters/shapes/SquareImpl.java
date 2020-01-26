@@ -1,18 +1,15 @@
 package list.characters.shapes;
 
-public class SquareImpl implements Shape {
-    @Override
-    public Shape draw() {
+public class SquareImpl implements Shape{
+
+    public SquareImpl draw() {
         asterisk.add("*");
-        for (int j = 0; j < 9; j++) {
-            getAsterisk();
-        }
-        System.out.println();
-        for (int j = 0; j < 3; j++) {
-            System.out.println(asterisk.get(0) + "\t\t" + asterisk.get(0));
-        }
-        for (int j = 0; j < 9; j++) {
-            getAsterisk();
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 6; j++) {
+                System.out.print(asterisk.get(0));
+
+            }
+            System.out.println();
         }
         return this;
     }
