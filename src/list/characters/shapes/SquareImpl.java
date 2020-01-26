@@ -1,9 +1,8 @@
-package list.characters;
+package list.characters.shapes;
 
-public class Square implements Shape {
+public class SquareImpl implements Shape {
     @Override
     public Shape draw() {
-        System.out.println("Drawing a Square");
         asterisk.add("*");
         for (int j = 0; j < 9; j++) {
             getAsterisk();

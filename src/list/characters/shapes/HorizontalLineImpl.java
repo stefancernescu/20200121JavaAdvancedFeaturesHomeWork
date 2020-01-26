@@ -1,13 +1,13 @@
-package list.characters;
+package list.characters.shapes;
 
-public class HorizontalLine implements Shape {
+public class HorizontalLineImpl implements Shape {
     @Override
     public Shape draw() {
-        System.out.println("Drawing horizontal line");
         asterisk.add("*");
         for (int i = 0; i < 9; i++) {
             getAsterisk();
         }
+        System.out.println();
         return this;
     }
 }
