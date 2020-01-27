@@ -2,6 +2,9 @@ package ex6.map;
 
 import ex6.map.exceptions.EmptyListException;
 import ex6.map.exceptions.EmptyMapException;
+import ex6.map.model.Company;
+import ex6.map.model.Employee;
+import ex6.map.model.Manager;
 
 import java.util.List;
 import java.util.Map;
@@ -15,6 +18,11 @@ public class MyHashMap {
     public MyHashMap(Map<Manager, List<Employee>> employeesMap) {
         this.employees = new CopyOnWriteArrayList<>();
         this.companyMap = employeesMap;
+        this.keyManager = new Manager();
+    }
+
+    public MyHashMap() {
+        this.employees = new CopyOnWriteArrayList<>();
         this.keyManager = new Manager();
     }
 

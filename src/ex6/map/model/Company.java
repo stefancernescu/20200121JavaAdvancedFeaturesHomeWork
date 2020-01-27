@@ -1,4 +1,4 @@
-package ex6.map;
+package ex6.map.model;
 
 public interface Company {
     String getName1();
@@ -6,4 +6,5 @@ public interface Company {
     Integer getSalary1();
 
     Integer getAge1();
+
 }

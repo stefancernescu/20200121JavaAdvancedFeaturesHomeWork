@@ -1,14 +1,26 @@
-package ex6.map;
+package ex6.map.model;
 
-public class Employee implements Company {
+public class Manager implements Company {
     private String name;
     private int age;
     private int salary;
 
-    public Employee(String name, int age, int salary) {
+    public Manager(String name, int age, int salary) {
         super();
         this.name = name;
         this.age = age;
+        this.salary = salary;
+    }
+
+    public Manager() {
+        super();
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 
@@ -23,7 +35,6 @@ public class Employee implements Company {
     public int getAge() {
         return age;
     }
-
 
     public int getSalary() {
         return salary;
