@@ -1,9 +1,9 @@
-package list.characters;
+package list.shape;
 
-import list.characters.service.IOService;
-import list.characters.shapes.HorizontalLineImpl;
-import list.characters.shapes.Shape;
-import list.characters.shapes.VerticalLineImpl;
+import list.shape.service.IOService;
+import list.shape.shapes.HorizontalLineImpl;
+import list.shape.shapes.Shape;
+import list.shape.shapes.VerticalLineImpl;
 
 public class Controller {
     private IOService ioService;

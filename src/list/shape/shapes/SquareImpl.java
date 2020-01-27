@@ -1,10 +1,10 @@
-package list.characters.shapes;
+package list.shape.shapes;
 
-public class VerticalLineImpl implements Shape {
-    @Override
-    public Shape draw() {
+public class SquareImpl implements Shape {
+
+    public SquareImpl draw() {
         for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 1; j++) {
+            for (int j = 0; j < 6; j++) {
                 System.out.print("*");
             }
             System.out.println();

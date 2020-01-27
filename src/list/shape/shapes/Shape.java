@@ -1,4 +1,4 @@
-package list.characters.shapes;
+package list.shape.shapes;
 
 public interface Shape {
     Shape draw();

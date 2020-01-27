@@ -1,4 +1,4 @@
-package list.characters.service;
+package list.shape.service;
 
 import java.util.Scanner;
 

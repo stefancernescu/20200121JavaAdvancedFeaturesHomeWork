@@ -1,9 +1,9 @@
-package list.characters;
+package list.shape;
 
-import list.characters.shapes.HorizontalLineImpl;
-import list.characters.shapes.Shape;
-import list.characters.shapes.SquareImpl;
-import list.characters.shapes.VerticalLineImpl;
+import list.shape.shapes.HorizontalLineImpl;
+import list.shape.shapes.Shape;
+import list.shape.shapes.SquareImpl;
+import list.shape.shapes.VerticalLineImpl;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,11 +13,11 @@ public class Main {
         Shape horizontalLine = new HorizontalLineImpl();
         Shape verticalLine = new VerticalLineImpl();
 
-        //Shape square = new SquareImpl();
+        Shape square = new SquareImpl();
         //square.draw();
+        //verticalLine.draw();
+        horizontalLine.draw();
         //horizontalLine.draw();
-//        verticalLine.draw();
-
 
     }
 }
