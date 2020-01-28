@@ -1,4 +1,4 @@
-package list.shape.service;
+package drawingEx5;
 
 import java.util.Scanner;
 
@@ -11,10 +11,9 @@ public class IOService {
     }
 
     public void displayMenu() {
-        System.out.println("\nAlege linia pe care vrei sa o desenezi");
         System.out.println("0. Iesire");
-        System.out.println("1. Orizontala");
-        System.out.println("2. Verticala");
+        System.out.println("1. Linie");
+        System.out.println("2. Coloana");
         System.out.println("3. Patrat");
     }
 }
