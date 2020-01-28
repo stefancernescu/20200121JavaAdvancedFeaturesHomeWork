@@ -16,6 +16,8 @@ public class Main {
             drawing.start();
         }catch (InputMismatchException ex){
             System.out.println("La consola se pot introduce numai numerele 1,2 sau 3.");
+        }catch (ArrayIndexOutOfBoundsException arrayIndexEx){
+            System.out.println("Lista este goala");
         }
 
     }
